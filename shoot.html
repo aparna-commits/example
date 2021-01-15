@@ -4,17 +4,32 @@
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin>
 </script>  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
-<!-- <script  src="babel.js"></script> -->
+<!-- <script src="babel.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA==" crossorigin="anonymous"></script>
 <div id="root"></div>
+<style>
+    .arrow{
+        width: 50px;
+    border: 2px solid red;
+    background: red;
+    display: inline-block;
+    }
+    .board{
+      width:500px;
+      height: 400px;
+      border: 2px solid red;
+      position: relative;
+  }
+  .baloon{
+      border: 2px solid red;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+  }
+    </style>
 <script type="text/babel">
-// class Board extends React.Component{
-//     render(){
-//         return <div>
 
-//         </div>
-//     }
-// }
+
 class Ballon extends React.Component{
     render(){
         const {s,l,t} = this.props;
@@ -25,30 +40,33 @@ class Ballon extends React.Component{
 }
 class Arrow extends React.Component{
     render(){
-        return <div classNmae="Arrow">
-
+        return <div className="arrow">
+gfjklg
         </div>
     }
 }
 class Board extends React.Component{
     render(){
-        return <div>
-        <Arrow />
-        <div>
-        <Ballon s="50" l="400" t="60" />
-        <Ballon s="100" l="250" t="150"/>
-        <Ballon s="50" l="350" t="250"/>
-        </div>
+        return 
+        <div className="board">
+            <Arrow />
+            <div>
+                <Ballon s="50" l="400" t="60" />
+                <Ballon s="100" l="250" t="150"/>
+                <Ballon s="50" l="350" t="250"/>
+            </div>
         </div>
     }
 }
 class App extends React.Component{
     render(){
-        return <div>
-        <Board />
+        return  <div>
+            <Board />
         </div>
     }
 }
-</script>
 
 ReactDOM.render(<App />, document.getElementById("root"));
+
+</script>
+
